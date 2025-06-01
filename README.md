@@ -1,4 +1,4 @@
-```markdown
+
 # Sandbox Evasion Detection Script
 
 ## Overview
@@ -38,5 +38,5 @@ This project is licensed under [MIT License](LICENSE), promoting responsible res
 
 ## Contact
 For inquiries, discussions, or collaboration opportunities, reach out via GitHub or email.
-```
+
 
