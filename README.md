@@ -2,8 +2,20 @@
 # Sandbox Evasion Detection Script
 
 ## Overview
+---
+
 This PowerShell script is part of a cybersecurity research project exploring **sandbox evasion techniques through environmental fingerprinting**. The script detects sandbox indicators—such as specific DLL files, known directory structures, and file hashes—and terminates execution upon detection. This approach contributes to the study of anti-sandbox methodologies by analyzing how analysis environments can be identified and bypassed.
 
+There are three PowerShell binaries with different levels of obfuscation to simulate a real threat actor:
+- `cuckouniversal.ps1` – The **source code**.
+- `UniversalCuckooRandomNames.ps1` – A **binary with randomized variable and function names**.
+- A third version that **uses a Base64 payload** to decode the source code.
+
+In a real environment, a threat actor would likely specify a **secondary payload** in cases where no detections are found. However, for ethical reasons, this script **only shuts down the computer if it detects `cuckoomon.dll` and other fragments**. 
+
+⚠️ **Warning:** Make sure to **save any work** before running the script. If experimenting with it, consider modifying the shutdown mechanism.
+
+---
 ## Features
 - **DLL Detection:** Searches for the presence of `cuckoomon.dll`, a common indicator of sandbox environments like Cuckoo Sandbox.
 - **Hash Detection:** Compares file hashes against a predefined list associated with virtualized or analysis environments.
