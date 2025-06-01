@@ -40,7 +40,7 @@ In a real environment, a threat actor would likely specify a **secondary payload
    ```sh
    .\sandbox-evasion.ps1
    ```
-I encorage you all to look at the source code!!!
+"I encourage everyone to experiment and explore Base64 encoding, the source code, and versions with randomly named variables!"
 
 ## Contributions
 Contributions are welcome! If you have improvements or additional techniques to enhance detection capabilities, feel free to submit a pull request.
