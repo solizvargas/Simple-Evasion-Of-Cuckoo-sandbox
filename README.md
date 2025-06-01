@@ -23,11 +23,12 @@ This PowerShell script is part of a cybersecurity research project exploring **s
    ```sh
    git clone https://github.com/yourusername/sandbox-evasion-script.git
    ```
-2. Open PowerShell with administrative privileges.
+2. Open PowerShell
 3. Execute the script:
    ```sh
    .\sandbox-evasion.ps1
    ```
+I encorage you all to look at the source code!!!
 
 ## Contributions
 Contributions are welcome! If you have improvements or additional techniques to enhance detection capabilities, feel free to submit a pull request.
