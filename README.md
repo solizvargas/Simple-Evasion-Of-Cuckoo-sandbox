@@ -1,54 +1,90 @@
+# Simple Evasion Of Cuckoo Sandbox 🕵️‍♂️
 
-# Sandbox Evasion Detection Script
+![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-brightgreen.svg) ![Releases](https://img.shields.io/badge/Releases-latest-blue.svg)
 
-## Overview
----
+Welcome to the **Simple Evasion Of Cuckoo Sandbox** repository. This project serves as a proof of concept that illustrates real-world techniques used by threat actors to evade sandbox environments. Understanding these methods is crucial for cybersecurity professionals and researchers working to enhance malware detection and analysis.
 
-This PowerShell script is part of a cybersecurity research project exploring **sandbox evasion techniques through environmental fingerprinting**. The script detects sandbox indicators—such as specific DLL files, known directory structures, and file hashes—and terminates execution upon detection. This approach contributes to the study of anti-sandbox methodologies by analyzing how analysis environments can be identified and bypassed.
+## Table of Contents
 
-There are three PowerShell binaries with different levels of obfuscation to simulate a real threat actor:
-- `cuckouniversal.ps1` – The **source code**.
-- `UniversalCuckooRandomNames.ps1` – A **binary with randomized variable and function names**.
-- A third version that **uses a Base64 payload** to decode the source code.
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
+8. [Releases](#releases)
 
-In a real environment, a threat actor would likely specify a **secondary payload** in cases where no detections are found. However, for ethical reasons, this script **only shuts down the computer if it detects `cuckoomon.dll` and other fragments**. 
+## Introduction
 
-⚠️ **Warning:** Make sure to **save any work** before running the script. If experimenting with it, consider modifying the shutdown mechanism.
+Sandbox environments, like Cuckoo, play a vital role in analyzing malware behavior. However, threat actors continuously adapt their techniques to bypass these systems. This repository explores various evasion techniques, providing insight into how malware can evade detection.
 
----
 ## Features
-- **DLL Detection:** Searches for the presence of `cuckoomon.dll`, a common indicator of sandbox environments like Cuckoo Sandbox.
-- **Hash Detection:** Compares file hashes against a predefined list associated with virtualized or analysis environments.
-- **Directory Detection:** Identifies storage directories used in malware analysis sandboxes.
-- **Exit Mechanism:** If any indicators are detected, the system shuts down to prevent further execution.
 
-## Research Focus
-- **Environmental Fingerprinting:** Detecting subtle artifacts left by sandbox environments that can indicate non-native execution.
-- **Unconventional Detection Techniques:** Experimenting with novel methods, including leveraging system inconsistencies and behavioral triggers.
-- **Practical Cybersecurity Applications:** Understanding how malware and security tools interact within controlled environments to strengthen detection capabilities.
+- **Real-World Techniques**: The project showcases methods that real threat actors use.
+- **Easy to Understand**: The code is structured for clarity, making it accessible for researchers and students.
+- **Modular Design**: Each evasion technique is modular, allowing for easy experimentation and modification.
+- **Documentation**: Comprehensive documentation guides users through setup and usage.
 
-## Disclaimer
-**This script is intended for educational and research purposes only.** It should not be used for malicious activities or to bypass legitimate security measures. The author and contributors assume no responsibility for improper or unethical use. Users should comply with ethical cybersecurity standards and legal regulations.
+## Installation
+
+To get started with this project, you need to clone the repository and install the required dependencies. Follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/solizvargas/Simple-Evasion-Of-Cuckoo-sandbox.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Simple-Evasion-Of-Cuckoo-sandbox
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/yourusername/sandbox-evasion-script.git
-   ```
-2. Open PowerShell
-3. Execute the script:
-   ```sh
-   .\sandbox-evasion.ps1
-   ```
-"I encourage everyone to experiment and explore Base64 encoding, the source code, and versions with randomly named variables!"
 
-## Contributions
-Contributions are welcome! If you have improvements or additional techniques to enhance detection capabilities, feel free to submit a pull request.
+Once installed, you can explore the various evasion techniques. Each technique has its own directory with a README file that provides specific instructions.
+
+To execute the proof of concept, download the latest release from the [Releases section](https://github.com/solizvargas/Simple-Evasion-Of-Cuckoo-sandbox/releases). After downloading, follow the instructions in the respective README file to execute the code.
+
+## Contributing
+
+We welcome contributions from the community. If you want to add new evasion techniques or improve existing ones, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+5. Open a pull request.
 
 ## License
-This project is licensed under [MIT License](LICENSE), promoting responsible research and open collaboration.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For inquiries, discussions, or collaboration opportunities, reach out via GitHub or email.
 
+For questions or feedback, please reach out to the maintainer at [your-email@example.com](mailto:your-email@example.com).
 
+## Releases
+
+You can find the latest releases [here](https://github.com/solizvargas/Simple-Evasion-Of-Cuckoo-sandbox/releases). Download the necessary files and execute them as instructed in the README files.
+
+---
+
+This repository aims to enhance understanding of malware evasion techniques. By sharing knowledge and tools, we can work together to improve cybersecurity practices. Thank you for visiting, and happy coding!
